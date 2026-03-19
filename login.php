@@ -32,15 +32,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $stmt->fetch();
 
         if ($user && password_verify($password, $user['password'])) {
-            // ── Connexion réussie ─────────────────────────
-            session_regenerate_id(true);  // Prévient la fixation de session
-            $_SESSION['user_id']   = $user['id'];
-            $_SESSION['user_name'] = $user['name'];
-            $_SESSION['user_role'] = $user['role'];
+    session_regenerate_id(true);
+    $_SESSION['user_id']   = $user['id'];
+    $_SESSION['user_name'] = $user['name'];
+    $_SESSION['user_role'] = $user['role'];
 
-            $redirect = $_GET['redirect'] ?? '/servilocal/dashboard.php';
-            header('Location: ' . $redirect . '?toast=' . urlencode('👋 Bienvenue, ' . $user['name'] . ' !'));
-            exit;
+    // ── Redirection selon le rôle ──────────────────────
+    if ($user['role'] === 'admin') {
+        $redirect = '/servilocal/admin.php';
+    } else {
+        $redirect = $_GET['redirect'] ?? '/servilocal/dashboard.php';
+    }
+
+    header('Location: ' . $redirect . '?toast=' . urlencode('👋 Bienvenue, ' . $user['name'] . ' !'));
+    exit;
         } else {
             $error = 'Email ou mot de passe incorrect.';
         }

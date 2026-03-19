@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$categories = ['plomberie','coiffure','informatique','electricite','jardinage','menage','transport','peinture'];
+$categories = ['plomberie','electricite','gaz'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">

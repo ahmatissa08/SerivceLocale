@@ -132,13 +132,10 @@ if (!function_exists('categoryIcon')) {
     function categoryIcon(string $cat): string {
         $map = [
             'plomberie'   => '🔧',
-            'coiffure'    => '💇',
-            'informatique'=> '💻',
             'electricite' => '⚡',
-            'jardinage'   => '🌿',
-            'menage'      => '🏠',
-            'transport'   => '🚗',
-            'peinture'    => '🎨',
+            'gaz'      => '🔥',
+            
+            
         ];
         return $map[$cat] ?? '✦';
     }
@@ -149,13 +146,8 @@ if (!function_exists('categoryName')) {
     function categoryName(string $cat): string {
         $map = [
             'plomberie'   => 'Plomberie',
-            'coiffure'    => 'Coiffure',
-            'informatique'=> 'Informatique',
             'electricite' => 'Électricité',
-            'jardinage'   => 'Jardinage',
-            'menage'      => 'Ménage',
-            'transport'   => 'Transport',
-            'peinture'    => 'Peinture',
+            'gaz'      => 'Gaz',
         ];
         return $map[$cat] ?? ucfirst($cat);
     }

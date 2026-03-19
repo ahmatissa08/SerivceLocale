@@ -74,14 +74,14 @@ $totalAll = array_sum($catCounts);
 $statsStmt  = $pdo->query('SELECT (SELECT COUNT(*) FROM providers) AS p, (SELECT COUNT(*) FROM bookings) AS b, (SELECT ROUND(AVG(rating)*20) FROM providers) AS s');
 $globalStats = $statsStmt->fetch();
 
-$categories  = ['plomberie','coiffure','informatique','electricite','jardinage','menage','transport','peinture'];
+$categories  = ['plomberie','gaz','electricite'];
 $pageTitle   = 'Accueil';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ServiLocal — Services de Proximité</title>
+<title>EGES Technologies — Services de Proximité</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/ServiLocal/assets/css/style.css">
 </head>
@@ -93,7 +93,7 @@ $pageTitle   = 'Accueil';
   <div>
     <div class="hero-badge">✦ Réseau de confiance local</div>
     <h1>Trouvez l'expert local <em>idéal</em> en un instant.</h1>
-    <p>Réservez des services de qualité autour de vous. Plombiers, coiffeurs, informaticiens — tous vérifiés.</p>
+    <p>Réservez des services de qualité autour de vous. Plombiers,electriciens — tous vérifiés.</p>
     <div class="hero-actions">
       <a href="#search" class="btn btn-primary">🔍 Explorer les services</a>
       <a href="/servilocal/register.php" class="btn btn-outline">✦ Devenir prestataire</a>

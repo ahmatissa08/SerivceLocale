@@ -17,7 +17,8 @@ $pageTitle = $pageTitle ?? 'ServiLocal';
 
 <header class="site-header">
   <nav class="nav-inner">
-    <a href="/servilocal/index.php" class="logo">Servi<span class="logo-dot">•</span>Local</a>
+    <a href="/servilocal/index.php" class="logo">EGES<span class="logo-dot">•</span>Technologies
+</a>
 
     <ul class="nav-links">
       <li><a href="/servilocal/index.php">Accueil</a></li>
