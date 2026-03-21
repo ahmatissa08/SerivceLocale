@@ -552,7 +552,7 @@ textarea.form-control { resize:vertical; min-height:90px; }
   <div class="sidebar-logo">
     <div class="logo-icon">SL</div>
     <div>
-      <div class="logo-text">Servi<span>•</span>Local</div>
+      <div class="logo-text">EGES<span>•</span>Technologies</div>
       <div class="logo-sub">Administration</div>
     </div>
   </div>
